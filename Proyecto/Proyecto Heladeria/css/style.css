@@ -1,0 +1,297 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+nav,
+button,
+section,
+header,
+footer,
+title {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+  font-family: cream;
+}
+
+header {
+  padding: 25px;
+  background: black;
+  color: white;
+  font-size: 15px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.span1 {
+  padding: 20px;
+}
+
+.menu {
+  border-top: 0.5px solid white;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  background-color: #000000;
+}
+
+.menu a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+.menu a:hover {
+  color: black;
+  background-color: white;
+}
+
+.menu a.active:hover {
+  color: black;
+  background-color: white;
+}
+
+.menu a.active {
+  color: #b5e8d5;
+}
+
+.float_right{
+  float: right !important;
+  }
+
+
+section {
+  background-color: #f9db79;
+  height: 500px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.logo {
+  width: auto;
+  height: 400px;
+}
+
+.mini-logo {
+  width: auto;
+  height: 60px;
+}
+
+.sectionContent {
+  width: auto;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 6em;
+}
+
+.side {
+  flex: 50%;
+  background-color: #f1f1f1;
+}
+
+.imgSide {
+  width: 100%;
+  height: auto;
+}
+
+.main {
+  flex: 50%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h6,
+p {
+  line-height: 1.6em;
+  text-align: center;
+}
+p {
+  padding-top: 60px;
+  width: 300px;
+}
+
+h5 {
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.imgFondo {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/helado5.png);
+  background-color: #b5e8d5;
+  width: 100%;
+  height: 600px;
+}
+
+.imgFondo2 {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/helado6.png);
+  background-color: #ffbfb3;
+  width: 100%;
+  height: 600px;
+}
+
+.imgFondo3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9db79;
+}
+
+.footer {
+  padding: 25px;
+  text-align: center;
+  background: black;
+  color: white;
+  font-size: 15px;
+}
+
+.menu-btn {
+  background-color: white;
+  border: 2px solid #2f2e2e;
+  color: #2f2e2e;
+  padding: 5px;
+  width: 100px;
+}
+.menu-btn:hover {
+  background-color: #2f2e2e;
+  border: 2px solid #2f2e2e;
+  color: white;
+  padding: 5px;
+  transition: border-color 0.4s, background-color 0.4s ease 0s;
+}
+
+
+/* ------------------------------------------------------- Fuentes -----------------------------------------------------*/
+
+
+@font-face {
+  font-family: belinda;
+  src: url(belinda.otf);
+}
+
+@font-face {
+  font-family: cream;
+  src: url(cream.otf);
+}
+
+/* ------------------------------------------------------- Media Queries -----------------------------------------------------*/
+@media screen and (max-width: 992px) {
+  .contenido {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    position: relative;
+  }
+
+  .menu a {
+    float: none;
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .main {
+    width: 100% !important;
+  }
+  .side {
+    display: none;
+  }
+
+  .main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+
+
+
