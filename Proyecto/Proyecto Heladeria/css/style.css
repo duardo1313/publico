@@ -95,6 +95,7 @@ header {
   position: sticky;
   top: 0;
   background-color: #000000;
+  z-index: 1;
 }
 
 .menu a {
@@ -121,10 +122,9 @@ header {
   color: #b5e8d5;
 }
 
-.float_right{
+.float_right {
   float: right !important;
-  }
-
+}
 
 section {
   background-color: #f9db79;
@@ -222,7 +222,6 @@ h5 {
   background-color: #f9db79;
 }
 
-
 .footer {
   padding: 25px;
   text-align: center;
@@ -246,9 +245,27 @@ h5 {
   transition: border-color 0.4s, background-color 0.4s ease 0s;
 }
 
+.helados {
+  width: 232px;
+  height: 232px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center {
+  width: 100%;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+}
+
+.block{
+  display: block;
+  float: left;
+}
 
 /* ------------------------------------------------------- Fuentes -----------------------------------------------------*/
-
 
 @font-face {
   font-family: belinda;
@@ -265,7 +282,6 @@ h5 {
   .contenido {
     flex-direction: column;
   }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -278,8 +294,6 @@ h5 {
     width: 100%;
     margin-left: 0px;
   }
-
-
 }
 
 @media screen and (max-width: 1400px) {
@@ -297,11 +311,257 @@ h5 {
 }
 
 @media screen and (max-width: 1100px) {
-  .img4{
+  .img4 {
     width: 100%;
   }
 }
 
 
+/* ------------------------------------------------------- Sorting -----------------------------------------------------*/
+
+*{
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.cf{
+	zoom:1
+}
+
+.cf:before,.cf:after{
+	content:"";
+	display:table
+}
+
+.cf:after{
+	clear:both
+}
+
+.fl-l{
+	float:left
+}
+
+.fl-r{
+	float:right
+}
+
+a{
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+}
+
+html, body{
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+	text-align:center;
+	color:#404040;
+	position:relative;
+}
+
+.wrapper{
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:100%;
+	margin:30px auto 0;
+	text-align:center;
+  display: flex;
+  flex-direction: row;
+    justify-content: space-around;
+}
+
+.product{
+	width:250px;
+	margin-right:20px;
+	background-color:#FFFFFF;
+	position:relative;
+}
+
+.product:last-of-type{
+	margin-right:0;
+}
+
+.container-prod{
+	height:350px;
+	overflow:hidden;
+	position:relative;
+	-moz-box-shadow: 0px 0px 0px 0px #F2F2F2;
+	-webkit-box-shadow:  0px 0px 0px 0px #F2F2F2;
+	box-shadow: 0px 0px 0px 0px #F2F2F2;
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+}
+
+.container-prod:hover, .container-prod.information, .container-prod.social-sharing{
+	-moz-box-shadow: 0px 0px 5px 0px #333;
+	-webkit-box-shadow:  0px 0px 5px 0px #333;
+	box-shadow: 0px 0px 5px 0px #333;
+}
+
+.image{
+	height:270px;
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
+	-o-transition:all 1s ease;
+	transition:all 1s ease;
+}
+
+.information .image{
+	height:150px;
+}
+
+.container-information{
+	height:40px;
+	overflow:hidden;
+	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
+	-o-transition:all 1s ease;
+	transition:all 1s ease;
+	background-color:#031E16;
+	color:#FFFFFF;
+}
+
+.information .container-information{
+	height:160px;
+}
+
+.container-information .title{
+	height:40px;
+	line-height:40px;
+	padding:0 10px;
+	background-color:#5DBA9D;
+	color:#FFFFFF;
+	font-size:20px;
+	font-weight:bold;
+	position:relative;
+}
+
+.close{
+	width:40px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	background-color:#11956c;
+	position:absolute;
+	right:-40px;
+	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
+	-o-transition:all 1s ease;
+	transition:all 1s ease;
+	color:#FFFFFF;
+}
+
+.information .close{
+	right:0;
+}
+
+.container-information .description{
+	padding:10px;
+	height:120px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
 
 
+.buttons{
+	position:relative;
+	z-index:2;
+  background-color:#11956c;
+}
+
+.buttons a{
+	text-align:center;
+	width:25%;
+	height:40px;
+	line-height:40px;
+	background-color:#11956c;
+	color:#FFFFFF;
+	text-decoration:none;
+	position:relative;
+	overflow:hidden;
+}
+
+.buttons a > span > span{
+	position:relative;
+	z-index:3;
+	display:block;
+	width:100%;
+}
+
+.buttons a > span:before{
+	content:"";
+	background-color:rgba(0,0,0,0);
+	width:100%;
+	height:40px;
+	position:absolute;
+	top:40px;
+	left:0;
+	z-index:1;
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+}
+
+.buttons a:hover > span:before, .information .buttons a.more > span:before , .social-sharing .buttons a.share > span:before{
+	top:0;
+	background-color:rgba(0,0,0,0.5);
+}
+
+
+.buttons a.cart.added > span:before{
+	top:0;
+	background-color:rgba(255,255,255,0.8);
+}
+
+.buttons a.cart > span > span.check{
+	width:100%;
+	height:40px;
+	position:absolute;
+	top:40px;
+	left:0;
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+}
+
+.buttons a.cart.added > span > span.check{
+	top:0;
+	color:#11956c;
+}
+
+.buttons a.cart > span > span.add{
+	width:100%;
+	height:40px;
+	position:absolute;
+	top:0;
+	left:0;
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+}
+
+.buttons a.cart.added > span > span.add{
+	top:-40px;
+}
+
+.buttons a i{
+	font-size:20px;
+}
+
+.buttons a:first-of-type{
+	width:50%;
+}
