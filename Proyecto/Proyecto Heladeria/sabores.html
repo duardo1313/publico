@@ -13,9 +13,15 @@
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/144c8faa5a.js" crossorigin="anonymous"></script>
 
+
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+          
+
 </head>
 
-<body>
+<body> 
 
     <header>
 
@@ -29,7 +35,12 @@
         <a href="index.html">Inicio</a>
         <a href="sabores.html" class="active">Sabores</a>
         <a href="sobre_nosotros.html">Sobre nosotros</a>
-        <a href="login.html" class="float_right">Login</a>
+
+        
+
+        <a href="login.html" class="btn float_right">Login</a>
+        <button class="clear-cart btn btn-danger p-3 float_right">Limpiar Cesta</button>
+        <button type="button" class="btn btn-primary p-3 float_right" data-toggle="modal" data-target="#cart">Cesta (<span class="total-count"></span>)</button>
     </div>
     <section>
 
@@ -70,6 +81,12 @@
 
 
 
+
+
+  
+
+<div class="white">
+
 <h1 class="center p-4">SABORES DE HELADOS</h1>
 <ul class="wrapper cf">
 
@@ -79,17 +96,17 @@
             <div class="container-information">
             	<div class="title">
                     Avellanas y Galletas
-                    <a href="javascript:void(0)" class="more close"><i class="fa fa-times"></i></a>                
                 </div>
+              
             </div>
             <div class="buttons cf">
-            	<a href="javascript:void(0)" class="cart fl-l">
+                <a href="javascript:void(0)" class="cart fl-l add-to-cart" data-name="Avellanas&nbsp;y&nbsp;galletas" data-price="2.5">
                 	<span>
                     	<span class="add">Añadir<i class="fas fa-shopping-cart"></i></span>
                    	</span>
-                      
                 </a>
             </div>
+
         </div>
 	</li>
 	<li class="product fl-l">
@@ -102,7 +119,7 @@
                 </div>
             </div>
             <div class="buttons cf">
-            	<a href="javascript:void(0)" class="cart fl-l">
+                <a href="javascript:void(0)" class="cart fl-l add-to-cart" data-name="Cheesecake&nbsp;de&nbsp;cereza" data-price="3">
                 	<span>
                     	<span class="add">Añadir<i class="fas fa-shopping-cart"></i></span>
                    	</span>
@@ -120,7 +137,7 @@
                 </div>
             </div>
             <div class="buttons cf">
-            	<a href="javascript:void(0)" class="cart fl-l">
+                <a href="javascript:void(0)" class="cart fl-l add-to-cart" data-name="Chocolate" data-price="3">
                 	<span>
                     	<span class="add">Añadir<i class="fas fa-shopping-cart"></i></span>
                    	</span>
@@ -143,7 +160,7 @@
                 </div>
             </div>
             <div class="buttons cf">
-            	<a href="javascript:void(0)" class="cart fl-l">
+                <a href="javascript:void(0)" class="cart fl-l add-to-cart" data-name="Oreo" data-price="3">
                 	<span>
                     	<span class="add">Añadir<i class="fas fa-shopping-cart"></i></span>
                    	</span>
@@ -161,7 +178,7 @@
                 </div>
             </div>
             <div class="buttons cf">
-            	<a href="javascript:void(0)" class="cart fl-l">
+                <a href="javascript:void(0)" class="cart fl-l add-to-cart" data-name="Pistacho" data-price="3">
                 	<span>
                     	<span class="add">Añadir<i class="fas fa-shopping-cart"></i></span>
                    	</span>
@@ -179,7 +196,7 @@
                 </div>
             </div>
             <div class="buttons cf">
-            	<a href="javascript:void(0)" class="cart fl-l">
+                <a href="javascript:void(0)" class="cart fl-l add-to-cart" data-name="Vainilla&nbsp;y&nbsp;frutilla" data-price="3">
                 	<span>
                     	<span class="add">Añadir<i class="fas fa-shopping-cart"></i></span>
                    	</span>
@@ -192,7 +209,7 @@
 </ul>
 
 
-<h1 class="center p-4 mt-4 mb-4">SABORES DE HELADOS</h1>
+<h1 class="center p-4 mt-4 mb-4">SABORES LIBRES DE LÁCTEOS</h1>
 
 <ul class="wrapper cf">
 	<li class="product fl-l">
@@ -205,7 +222,7 @@
                 </div>
             </div>
             <div class="buttons cf">
-            	<a href="javascript:void(0)" class="cart fl-l">
+                <a href="javascript:void(0)" class="cart fl-l add-to-cart" data-name="Banana&nbsp;y&nbsp;miel" data-price="3">
                 	<span>
                     	<span class="add">Añadir<i class="fas fa-shopping-cart"></i></span>
                    	</span>
@@ -223,7 +240,7 @@
                 </div>
             </div>
             <div class="buttons cf">
-            	<a href="javascript:void(0)" class="cart fl-l">
+                <a href="javascript:void(0)" class="cart fl-l add-to-cart" data-name="Soja&nbsp;con&nbsp;caramelo&nbsp;salado" data-price="3">
                 	<span>
                     	<span class="add">Añadir<i class="fas fa-shopping-cart"></i></span>
                    	</span>
@@ -241,7 +258,7 @@
                 </div>
             </div>
             <div class="buttons cf">
-            	<a href="javascript:void(0)" class="cart fl-l">
+                <a href="javascript:void(0)" class="cart fl-l add-to-cart" data-name="Sorbete&nbsp;de&nbsp;frambuesa" data-price="3">
                 	<span>
                     	<span class="add">Añadir<i class="fas fa-shopping-cart"></i></span>
                    	</span>
@@ -263,7 +280,7 @@
                 </div>
             </div>
             <div class="buttons cf">
-            	<a href="javascript:void(0)" class="cart fl-l">
+                <a href="javascript:void(0)" class="cart fl-l add-to-cart" data-name="Sorbete&nbsp;de&nbsp;frutilla" data-price="3">
                 	<span>
                     	<span class="add">Añadir<i class="fas fa-shopping-cart"></i></span>
                    	</span>
@@ -281,7 +298,7 @@
                 </div>
             </div>
             <div class="buttons cf">
-            	<a href="javascript:void(0)" class="cart fl-l">
+                <a href="javascript:void(0)" class="cart fl-l add-to-cart" data-name="Sorbete&nbsp;de&nbsp;lima" data-price="3">
                 	<span>
                     	<span class="add">Añadir<i class="fas fa-shopping-cart"></i></span>
                    	</span>
@@ -299,7 +316,7 @@
                 </div>
             </div>
             <div class="buttons cf">
-            	<a href="javascript:void(0)" class="cart fl-l">
+                <a href="javascript:void(0)" class="cart fl-l add-to-cart" data-name="Sorbete&nbsp;de&nbsp;zarzamora" data-price="3">
                 	<span>
                     	<span class="add">Añadir<i class="fas fa-shopping-cart"></i></span>
                    	</span>
@@ -311,6 +328,7 @@
     
 </ul>
 
+</div>
 
 
 
@@ -321,4 +339,33 @@
     <footer class="footer mt-5">
         <span class="span1">Av. lorem ipsum 122 Malaga, CP 29014 | Todos los Días 10AM-10PM </span>
     </footer>
+
+     <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cesta - Pedidos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+            
+          </table>
+          <div>Precio Total: €<span class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Pagar ahora</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ 
+
+<script src="js/shopping-cart.js"></script>
 </body>
