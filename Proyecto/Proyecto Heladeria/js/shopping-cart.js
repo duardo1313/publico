@@ -206,6 +206,4 @@
       displayCart();
     });
     
-    displayCart();
-    //# sourceURL=pen.js
-    
+    displayCart();    
