@@ -42,11 +42,16 @@
       </a>
       
 
-      <ul class="dropdown-menu bg-dark w-100"  aria-labelledby="dropdownMenuLink">
-          <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+      <ul class="dropdown-menu bg-dark w-100" role="menu" aria-labelledby="dropdownMenuLink">
+        <!-- <li><a class="dropdown-item" href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li> -->
 
-          
-      </ul>
+
+        <form method="POST" action="{{ route('logout') }}">
+           @csrf
+   
+           <a class="dropdown-item" href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();"><i class="fa fa-btn fa-sign-out">{{ __('Log out') }}</i></a>
+       </form>
+     </ul>
 
      
       

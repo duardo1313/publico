@@ -24,10 +24,17 @@
         <img src="img/Logo azul.png" alt="logo_helado" class="mini-logo">
 
     </header>
+
+
+
     <div class="navbar navbar-dark bg-dark menu float_left">
         <a href="{{ url('/index') }}">Inicio</a>
         <a href="{{ url('/sabores') }}" class="active">Sabores</a>
         <a href="{{ url('/sobre_nosotros') }}">Sobre nosotros</a>
+
+        
+
+
         @if (Auth::check())
 
         <button class="clear-cart btn btn-danger p-3 float_right">Limpiar Cesta</button>
@@ -39,8 +46,17 @@
       </a>
 
       <ul class="dropdown-menu bg-dark w-100" role="menu" aria-labelledby="dropdownMenuLink">
-          <li><a class="dropdown-item" href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+         <!-- <li><a class="dropdown-item" href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li> -->
+
+
+         <form method="POST" action="{{ route('logout') }}">
+            @csrf
+    
+            <a class="dropdown-item" href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();"><i class="fa fa-btn fa-sign-out">{{ __('Log out') }}</i></a>
+        </form>
       </ul>
+     
+    
     </li>
 
   
